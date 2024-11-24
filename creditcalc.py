@@ -26,13 +26,13 @@ def calculate_usage():
             'timestamp': message['timestamp']
         }
 
-        # The massage may have a report id, if we need to include some information about it
+        # The message may have a report id, if we need to include some information about it
         if ( 'report_id' in message ):
             # Get info about the report if it is available
             report = orbitalcopilot.get_report( message['report_id'] )
 
             if ( report != None ):
-                #There was infomation about the report available. Add report namd and the cost provided to usage.
+                #There was information about the report available. Add the report name and the cost provided to usage.
                 message_usage['report_name'] = report['name']
                 message_usage['credits_used'] = report['credit_cost']
             else:
