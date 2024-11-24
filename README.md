@@ -31,7 +31,7 @@ I broke the code into three modules with distinct roles. This makes development 
 
 I noticed that the rules around base cost, unique word bonus and palindromes could be interpreted in a number of ways. I decided that the base cost was the start cost AND the minimum cost. And that the minimum should be checked before it might get doubled. Other interpretations would be just as valid so this is worth a check.
 
-## Acuracy
+## Accuracy
 Logging and testing help with accuracy, but as things change, they are no guarenty. Ultimately when accuracy is critical it needs additional consideration. A quality Service Level Objective is a great way to measure accuracy to a well-understood target. A new service may be required to regularly inspect the quality of results and generate the indicator.
 
 # Consessions and left to do
