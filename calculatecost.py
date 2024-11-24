@@ -69,13 +69,13 @@ def credits_by_message(message):
 
     #Palindromes: If the entire message is a palindrome (that is to say, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward), double the total cost after all other rules have been applied.
     lower_alpha = re.sub( r'[^a-z0-9]+', '', message.lower() )    #only alpha nemeric characters.  (can't use \w as that has _)
-    if ( lower_alpha == lower_alpha[::-1] ):  #if alpha newmeric only matches it self reversed, then it's a palindrome.
+    if ( lower_alpha == lower_alpha[::-1] ):  #if alpha numeric only matches itself reversed, then it's a palindrome.
         cost = cost * 2
-        logger.debug('Palindrome detected, cost doubled! "%s" is the same backwords. Cost:%s', lower_alpha, cost )
+        logger.debug('Palindrome detected, cost doubled! "%s" is the same backwards. Cost:%s', lower_alpha, cost )
     else:
         logger.debug('Not a palindrome: "%s"', lower_alpha )
 
-    cost = round(cost, 2)  #Maths is not python's strongest point. Given we have only ever delt with 2dps, let's get back to that and shed any extra decimals
+    cost = round(cost, 2)  #Maths is not python's strongest point. Given we have only ever dealt with 2dps, let's get back to that and shed any extra decimals
     logger.info('Final cost: %s For text: %s', cost, message)
     return cost
 
