@@ -3,7 +3,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-# Deal with getting all the meassages sent to Orbital Copilot in the current period
+# Deal with getting all the messages sent to Orbital Copilot in the current period
 # Returns all messages in an array of dict
 def get_messages():
     url = 'https://owpublic.blob.core.windows.net/tech-task/messages/current-period'
